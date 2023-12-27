@@ -1,0 +1,31 @@
+.divProducto{
+    display: flex;
+    flex-direction: row;
+}
+
+.divProductoText{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    margin-left: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.divProductoText h1{
+    font-size: large;
+}
+
+.boton{
+    margin-left: 5%;
+}
+
+.modal h1{
+    font-size: xx-large ;
+    margin-bottom: 2vw;
+}
+
+
+.modal h2{
+    font-size: large;   
+}

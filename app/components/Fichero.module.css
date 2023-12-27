@@ -1,0 +1,15 @@
+.nomEmpresa{
+    font-size: large;
+    
+}
+
+.imagen{
+    margin-bottom: 15%;
+    min-height: 150px;
+}
+
+.divImagen{
+    width: 50%;
+    height: 50%;
+    margin-bottom: 30%;
+}

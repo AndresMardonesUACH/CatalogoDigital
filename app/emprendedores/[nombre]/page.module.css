@@ -1,0 +1,157 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: #64E0DF;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+}
+
+.header div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    justify-content: right;
+}
+
+.title{
+    width: 30%;
+    margin: 1%;
+  }
+  
+.header div a{
+    margin-left: 3%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 92.9vh;
+    margin-top: 3.6%;
+    margin-right: 0.1%;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.bgImagen{
+    opacity: 0.9;
+}
+
+.divPrincipal{
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+
+.divLogo{
+    position: relative;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-top: 0.5%;
+}
+
+.logo{
+    width: 8rem;
+    height: 8rem;
+    border: 0.1rem solid black;
+    border-radius: 5%;
+    position: absolute;
+}
+
+.divImagen{
+    position: relative;
+    margin-bottom: 10%;
+    margin-left: 28%;
+    margin-top: 4%; 
+}
+
+.imagen{
+    width: 20rem;
+    height: 20rem;
+    position:absolute;
+}
+
+.divNombre{
+    background-color:rgb(206, 249, 206);
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    width: 60%;
+    z-index: 1;
+}
+
+.info h1{
+    font-size: xx-large;
+}
+
+.historia{
+    background-color:rgb(206, 249, 206);
+    margin-left: 50%;
+    padding: 3%;
+    padding-top: 5%;
+    z-index: 1;
+}
+
+.historia p{
+    font-size: small;
+    font-style: oblique;
+}
+
+.divProduccion{
+    background-color: rgb(206, 249, 206);
+    padding: 3%;
+    margin: 3%;
+    margin-top: 50%;
+    z-index: 1;
+}
+
+.divProduccionText{
+    width: 100%;
+    background-color: rgb(206, 249, 206);
+    padding: 3%;
+    margin-top: 3%;
+    text-align: justify;
+    z-index: 1;
+}
+
+
+.divGeografia{
+    background-color: rgb(206, 249, 206);
+    padding: 3%;
+    margin: 3%;
+    margin-top: 70%;
+    z-index: 1;
+}
+
+
+
+.divCertificados{
+    background-color:rgb(206, 249, 206);
+    padding: 3%;
+    margin: 3%;
+    margin-top: 80%;
+    margin-bottom: 90%;
+    z-index: 1;
+}
+
+.catalogo{
+    width: 50vw;
+    height: 92.9vh;
+    overflow-y: scroll;
+    background-color: rgb(206, 249, 206);
+    margin-top: 3.6%;
+    margin-left: 0.1%;
+}
+
+.productos{
+    margin: 7.1%;
+}
