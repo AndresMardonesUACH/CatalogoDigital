@@ -21,19 +21,19 @@ export default function Producto(props){
     const {info} = props
     return(
         <>
-        <Card maxW='sm' margin={5}>
+        <Card maxWidth={320} maxH={200}  margin={5}>
             <div className={styles.divProducto}>
                 <Image
                     src = {info.foto}
                     width={150}
-                    height={150}
+                    height={100}
                     alt = "Foto producto"
                     className={styles.imagen}
                 />
                 <div className={styles.divProductoText}>
                     <h1>{info.nomProducto}</h1>
                     <p>Valor : ${info.precio}</p>
-                    <Button className={styles.boton} marginLeft={10} marginTop={30} onClick={onOpen}>Ver más</Button>
+                    <Button className={styles.boton} marginLeft={10} marginTop={27} onClick={onOpen}>Ver más</Button>
                 </div>
             </div>
         </Card>

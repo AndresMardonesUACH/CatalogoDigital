@@ -10,14 +10,12 @@ export default function Home() {
   return (
     <>
     <header>
+        <a href='#'>Inicio</a>
+        <a href='#nuestrosObj'>Objetivos</a>
         <Link href='/' className='main-title'><h1>Catálogo Pymes</h1></Link>
-          <div>
-            <a href='#'>Inicio</a>
-            <a href='#nuestrosObj'>Nuestros Objetivos</a>
-            <a href='#beneficios'>Beneficios</a>
-            <a href='#emprendedores'>Emprendedores</a>
-          </div>
-      </header>
+        <a href='#beneficios'>Beneficios</a>
+        <a href='#emprendedores'>Emprendedores</a>
+    </header>
     <main>
 
       
@@ -25,14 +23,15 @@ export default function Home() {
       <div className='div-sobreN'>
         <div className='div-imagen'>
         <Image
-          src = "/images/sobrenosotros.webp"
+          src = "/images/sobrenosotros.jpg"
           fill
           alt='Sobre Nosotros'
         />
         </div>
         <div className='div-sobreN-text'>
           <h1>Conozca y apoye a las Pymes de su comuna:</h1>
-          <p>Qué producen, cómo trabajan, dónde se encuentran; y los más importante, su Historia. Buscamos promocionar y posicionar de manera moderna y efectiva a los emprendedores de Chile.</p>
+          <p>Qué producen, cómo trabajan, dónde se encuentran; y los más importante, su Historia.</p>
+          <p>Buscamos promocionar y posicionar de manera moderna y efectiva a los emprendedores de Chile.</p>
         </div>
       </div>
 
@@ -45,7 +44,7 @@ export default function Home() {
         </div>
         <div className='div-imagen-2'>
         <Image
-          src = "/images/nuestrosobjetivos.webp"
+          src = "/images/nuestrosobjetivos.png"
           fill
           alt='Nuestros Objetivos'
         />
@@ -53,13 +52,6 @@ export default function Home() {
       </div>
 
       <div className='div-beneficios' id='beneficios'>
-      <div className='div-imagen'>
-        <Image
-          src = "/images/sobrenosotros.webp"
-          fill
-          alt='Sobre Nosotros'
-        />
-        </div>
         <div className='div-beneficios-text'>
           <h1>Beneficios de Catálogo Pymes</h1>
           <ul>
@@ -72,14 +64,19 @@ export default function Home() {
         </div>
       </div>
 
+        <div className='div-imagen-3' id = "emprendedores">
+          <Image
+            src = "/images/banda.jpg"
+            fill
+            alt='Banda'
+          />
+        </div>
 
-
-      <div className='div-emprende'  id = "emprendedores">
-        <h1>Emprendedores</h1>
-
-        <Buscador/>
-
-
+        <div className='div-emprende' >
+          <h1>Red de Emprendedores</h1>
+          <Buscador/>
+        </div>
+      <div className='div-emprende-2'  >
         <div className='div-ficheros'>
           {data.map((emprendedor, index) => (
             <div className='fichero'>

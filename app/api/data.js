@@ -15,7 +15,9 @@ export const data =
                     ],
         produccion: "Nuestro proceso de elaboración comienza con la cosecha. Esta comienza cuando las aceitunas de los olivos de Terra Santa se encuentran con un porcentaje de agua y aceite adecuado. Gracias a maquinaria con tecnología de punta, nuestras aceitunas son cosechadas y transportadas a la planta de proceso en un tiempo menor a 2 horas para preservar todo el sabor y calidad de la fruta.",
         historia: "Nuestros olivos crecen en el corazón del valle de Curacaví bajo un clima privilegiado que hace del Aceite de Oliva Extra Virgen Terra Santa un aceite de oliva verdaderamente excepcional. Nuestras aceitunas son elegidas a través de un proceso tradicional, en el que nos aseguramos que solo las aceitunas de más alta calidad sean parte del proceso de confección de nuestro Aceite de Oliva.",
-        imagenes:["/images/terraSanta1.jpg", "/images/wall1.jpg"]
+        imagenes:["/images/terraSanta1.jpg", "/images/wall1.jpg"],
+        mapa: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d106594.44373268957!2d-71.12335073280775!3d-33.3951718099905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1704124274281!5m2!1ses-419!2scl" 
+
       },
 
       {
@@ -31,7 +33,8 @@ export const data =
         ],
         produccion: "Esse eu quis sit esse consectetur non commodo exercitation duis nisi. Proident nisi mollit amet voluptate anim laborum. Pariatur veniam quis sint nostrud enim aute commodo cupidatat anim.",
         historia: "Kutral nace el año 2019 con el objetivo de que cada joya fabricada sea una obra de arte única, creada con amor y dedicación por manos expertas. Nuestro objetivo es que te sientas identificado con tu grabado y que te ayude a contar tu historia, que tu joya Kutral sea una extensión de ti mismo. Por eso, apoyamos a artesanos Chilenos y trabajamos en estrecha colaboración con ellos para crear piezas auténticas. Únete a nuestra comunidad y lleva contigo un pedacito de Chile.",
-        imagenes: ["/images/kutral1.webp", "/images/wall2.webp"]
+        imagenes: ["/images/kutral1.webp", "/images/wall2.webp"],
+        mapa:"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d426242.74759110535!2d-70.66861973815142!3d-33.42268471900482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1704124817043!5m2!1ses-419!2scl" 
       },
       {
         nombre: "Kutral",
@@ -44,6 +47,18 @@ export const data =
         hiddenNombre: "Payamtume",
         rubro: "Aceites",
         logo: "/images/logo4.jpg",
+      },
+      {
+        nombre: "Kutral",
+        hiddenNombre: "Artesanías Volcán",
+        rubro: "Artesanía",
+        logo: "/images/logo5.jpg",
+      },
+      {
+        nombre: "TerraSanta",
+        hiddenNombre: "Mawud",
+        rubro: "Artesanía",
+        logo: "/images/logo6.png",
       },
     
     ]

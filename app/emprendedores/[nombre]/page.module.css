@@ -1,42 +1,36 @@
 .main{
     display: flex;
     flex-direction: row;
-    
+    font-family: 'Century Gothic';
 }
 
 .header{
+    width: 100vw;
+    background-color: white;
+    box-shadow: 1px 4px 6px 0px rgba(181,172,181,0.8);
     display: flex;
     flex-direction: row;
-    background-color: #64E0DF;
-    width: 100vw;
-    position: fixed;
     z-index: 100;
+    justify-content: center;
+    font-family: 'Century Gothic';
+    position: fixed;
 }
 
-.header div{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 1%;
-    justify-content: right;
+.header a{
+    margin: 0.5% 3% 0.5% 3%;
 }
 
 .title{
-    width: 30%;
-    margin: 1%;
-  }
-  
-.header div a{
-    margin-left: 3%;
+    font-size: 1.3rem;
+    margin: 0.1% 5% 0.1% 5%;
 }
 
 .info{
     display: flex;
     flex-direction: column;
     width: 50vw;
-    height: 92.9vh;
-    margin-top: 3.6%;
-    margin-right: 0.1%;
+    height: 94vh;
+    margin-top: 3%;
     overflow-y: hidden;
     scroll-behavior: smooth;
     position: relative;
@@ -67,21 +61,9 @@
     position: absolute;
 }
 
-.divImagen{
-    position: relative;
-    margin-bottom: 10%;
-    margin-left: 28%;
-    margin-top: 4%; 
-}
-
-.imagen{
-    width: 20rem;
-    height: 20rem;
-    position:absolute;
-}
 
 .divNombre{
-    background-color:rgb(206, 249, 206);
+    background-color:#f0f8ff;
     display: flex;
     flex-direction: row;
     padding: 3%;
@@ -94,7 +76,7 @@
 }
 
 .historia{
-    background-color:rgb(206, 249, 206);
+    background-color:aliceblue;
     margin-left: 50%;
     padding: 3%;
     padding-top: 5%;
@@ -107,51 +89,89 @@
 }
 
 .divProduccion{
-    background-color: rgb(206, 249, 206);
+    background-color: #f0f8ff;
     padding: 3%;
     margin: 3%;
-    margin-top: 50%;
+    margin-top: 80%;
     z-index: 1;
 }
 
 .divProduccionText{
-    width: 100%;
-    background-color: rgb(206, 249, 206);
+    width: 60%;
+    background-color: aliceblue;
     padding: 3%;
-    margin-top: 3%;
     text-align: justify;
     z-index: 1;
 }
 
-
-.divGeografia{
-    background-color: rgb(206, 249, 206);
-    padding: 3%;
-    margin: 3%;
-    margin-top: 70%;
-    z-index: 1;
+.divImagen{
+    position: relative;
+    margin-bottom: 10%;
+    margin-left: 50%; 
 }
 
+.imagen{
+    width: 25vw;
+    height: 46.5vh;
+    position:absolute;
+}
 
-
-.divCertificados{
-    background-color:rgb(206, 249, 206);
+.divGeografia{
+    background-color: aliceblue;
     padding: 3%;
     margin: 3%;
     margin-top: 80%;
-    margin-bottom: 90%;
+    z-index: 1;
+}
+
+.divMapa{
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin: auto;
+}
+
+
+.divCertificados{
+    background-color:aliceblue;
+    padding: 3%;
+    margin: 3%;
+    margin-top: 50%;
+    margin-bottom: 120%;
     z-index: 1;
 }
 
 .catalogo{
     width: 50vw;
-    height: 92.9vh;
-    overflow-y: scroll;
-    background-color: rgb(206, 249, 206);
-    margin-top: 3.6%;
-    margin-left: 0.1%;
+    height: 94vh;
+    overflow-y: auto;
+    background-color: #89B0CD;
+    margin-top: 3%;
+    text-align: center;
+/*
+        --s: 64px;
+        --c1: #89B0CD;
+        --c2: aliceblue;
+        
+        --_g: 90deg,#0000 0; 
+        background:
+          conic-gradient(from 135deg,var(--c1) var(--_g)) var(--s) calc(var(--s)/2),
+          conic-gradient(from 135deg,var(--c2) var(--_g)),
+          conic-gradient(from 135deg at 50% 0,var(--c1) var(--_g)) var(--c2); 
+        background-size: calc(2*var(--s)) var(--s);
+
+   */
+}
+
+.titleCat{
+    font-size: x-large;
+    margin-top: 2%;
+    background-color: white;
 }
 
 .productos{
-    margin: 7.1%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
 }
+

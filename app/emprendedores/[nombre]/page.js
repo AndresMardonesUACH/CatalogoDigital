@@ -6,7 +6,9 @@ import '../../globals.css'
 import Image from 'next/image'
 import {data} from '@/app/api/data'
 import { useEffect, useState } from "react"
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import Producto from '@/app/components/Producto'
+import { border } from "@chakra-ui/react"
 
 
 function buscaInfo(data, nomEmpresa){
@@ -36,13 +38,12 @@ export default function Emprendedor() {
         return (
             <div>
                 <div className={styles.header}>
+                    <a href='#historia'>Nuestra historia</a>
+                    <a href='#produccion'>Producción</a>
                     <Link href='/' className={styles.title}><h1>Catálogo Pymes</h1></Link>
-                    <div>
-                        <a href='#historia'>Nuestra historia</a>
-                        <a href='#produccion'>Producción</a>
-                        <a href='#geografia'>Geografía</a>
-                        <a href='#certificados'>Certificados</a>
-                    </div>
+                    <a href='#geografia'>Geografía</a>
+                    <a href='#certificados'>Certificados</a>
+
                 </div>
                 <div className={styles.main}>
                     <div className={styles.info}>
@@ -88,21 +89,20 @@ export default function Emprendedor() {
                         <div id="geografia" className={styles.divGeografia}>
                             <h1>Características Geográficas</h1>
                         </div>
-                        <div className={styles.mapContainer}>
+                        <div className={styles.divMapa}>
+                            <iframe src={infoEmprendedor.mapa}width="500" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className={styles.mapa}></iframe>
                         </div>
-                        
                         <div id="certificados" className={styles.divCertificados}>
                             <h1>Certificados</h1>
                             <p>{infoEmprendedor.certificados}</p>
                         </div>
-
                     </div>
+
                     <div className={styles.catalogo}>
+                        <h1 className={styles.titleCat}>Nuestros Productos</h1>
                         <div className={styles.productos}>
                             {infoEmprendedor.productos.map((producto, index) => (
-                                <div className={styles.producto} key={index}>
-                                    <Producto info = {producto}/>
-                                </div>
+                                <Producto info = {producto} key={index}/>
                             ))}
                         </div>
                     </div>

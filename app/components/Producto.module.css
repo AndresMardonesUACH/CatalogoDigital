@@ -1,6 +1,8 @@
 .divProducto{
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+    height: 100%;
 }
 
 .divProductoText{
@@ -16,9 +18,7 @@
     font-size: large;
 }
 
-.boton{
-    margin-left: 5%;
-}
+
 
 .modal h1{
     font-size: xx-large ;

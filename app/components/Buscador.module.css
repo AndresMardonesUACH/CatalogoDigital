@@ -5,13 +5,14 @@
     margin-right: 10vw;
     justify-items: center;
   }
-  
-  .buscadorSelec{
-    display: flex;
+
+
+.buscadorSelec{
+    display: none;
     flex-direction: row;
     justify-content: center;
-  }
+}
   
-  .buscadorSelec p{
-    margin-right: 2vw;
-  }
+.buscadorSelec p{
+  margin-right: 2vw;
+}

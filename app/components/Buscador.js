@@ -40,8 +40,8 @@ export default function Buscador() {
         <div className={styles.buscador}>
           <div>
             <Menu closeOnSelect={true} >
-            <MenuButton as={Button} margin={2} colorScheme={"blue"}>
-                Región <IoChevronDownOutline />
+            <MenuButton as={Button} rightIcon={<IoChevronDownOutline />} margin={6} colorScheme={"white"} color={"black"} border={"1px"} size={"lg"}>
+                Región 
               </MenuButton>
               <MenuList>
                 <MenuOptionGroup defaultValue = "Todas" type='radio'>
@@ -53,8 +53,8 @@ export default function Buscador() {
             </Menu>
 
             <Menu closeOnSelect={true}>
-            <MenuButton as={Button} margin={2} colorScheme={"blue"}>
-                Comuna <IoChevronDownOutline />
+            <MenuButton as={Button} rightIcon={<IoChevronDownOutline />} margin={6} colorScheme={"white"} color={"black"} border={"1px"} size={"lg"}>
+                Comuna
               </MenuButton>
               <MenuList>
                 <MenuOptionGroup defaultValue="Todas" type='radio'>
@@ -69,8 +69,8 @@ export default function Buscador() {
             </Menu>
 
             <Menu closeOnSelect={true}>
-              <MenuButton as={Button} margin={2} colorScheme={"blue"}>
-                Categoría <IoChevronDownOutline />
+              <MenuButton as={Button} rightIcon={<IoChevronDownOutline />} margin={6} colorScheme={"white"} color={"black"} border={"1px"} size={"lg"}>
+                Categoría
               </MenuButton>
               <MenuList>
                 <MenuOptionGroup defaultValue="Todas" type='radio'>
