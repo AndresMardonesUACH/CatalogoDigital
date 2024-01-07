@@ -33,30 +33,29 @@ header a{
 
 .div-sobreN{
   display: flex;
-  text-align: right;
+  text-align: left;
   justify-content: center;
   flex-direction: row;
-  padding: 5% 8% 5% 8%;
   background-color: aliceblue;
+  padding-top: 5.3vh;
   z-index: 20;
 }
 
 .div-imagen{
   position: relative;
-  width: 475px;
-  height: 267px;
-  margin-top: 2%;
+  width: 1278px;
+  height: 450px;
+  margin-top: 0%;
 }
 
 
 .div-sobreN-text{
-  margin: 2%;
-  margin-left: 5%;
+  margin: 4%;
+  margin-left: 7%;
 }
 
 .div-sobreN-text h1{
   font-size: xx-large;
-  margin: 2%;
 }
 
 .div-nuestrosObj{
@@ -64,20 +63,21 @@ header a{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 5% 8% 5% 8%;
   background-color: rgb(255, 255, 255);
 }
 
 .div-imagen-2{
   position: relative;
-  width: 1004px;
-  height: 305px;
+  width: 2000px;
+  height: 500px;
 }
 
 .div-nuestrosObj-text{
   width: 100%;
   text-align: justify;
+  margin: 4%;
   margin-right: 4%;
+  margin-bottom: 0;
 }  
 
 .div-nuestrosObj-text h1{
@@ -96,7 +96,7 @@ header a{
 .div-imagen-3{
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 100px;
 }
 
 .div-beneficios-text{

@@ -5,10 +5,7 @@ import styles from "./page.module.css"
 import '../../globals.css'
 import Image from 'next/image'
 import {data} from '@/app/api/data'
-import { useEffect, useState } from "react"
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import Producto from '@/app/components/Producto'
-import { border } from "@chakra-ui/react"
 
 
 function buscaInfo(data, nomEmpresa){
@@ -25,13 +22,6 @@ function buscaInfo(data, nomEmpresa){
 export default function Emprendedor() {
     const nombre = useParams().nombre
     const existe = true
-    const defaultProps = {
-        center: {
-          lat: 10.99835602,
-          lng: 77.01502627
-        },
-        zoom: 11
-      };
     const infoEmprendedor = buscaInfo(data, nombre)
     
     if(infoEmprendedor != "no existe"){
@@ -47,55 +37,91 @@ export default function Emprendedor() {
                 </div>
                 <div className={styles.main}>
                     <div className={styles.info}>
-                        <Image
-                            src={infoEmprendedor.imagenes[1]}
-                            fill
-                            alt='bg image'
-                            className={styles.bgImagen}
-                        />
-                        <div className={styles.divPrincipal}>
-                            <div className={styles.divLogo}>
-                            <div className={styles.logo}>
-                                <Image
-                                    src = {infoEmprendedor.logo}
-                                    fill
-                                    alt = "Foto producto"
-                                /> 
+                        <div className={styles.divPrincipal} id="historia">
+                            <Image
+                                src={infoEmprendedor.imagenes[0]}
+                                fill
+                                alt='bg image'
+                                className={styles.bgImagen}
+                            />
+                            <div className={styles.divNomLogo}>
+                                <div className={styles.logo}>
+                                    <Image
+                                        src={infoEmprendedor.logo}
+                                        fill
+                                        alt="Foto producto"
+                                    />
+                                </div>
+                                <div className={styles.divNombre}>
+                                    <h1>{nombre}</h1>
+                                </div>
                             </div>
+                            <div className={styles.historia}>
+                                <h1>Nuestra Historia</h1>
+                                <p>{infoEmprendedor.historia[0]}</p>
                             </div>
-                            <div className={styles.historia} id="historia">
-                                Nuestra Historia
-                                <p>{infoEmprendedor.historia}</p>
+                            <div className={styles.historia2}>
+                                <p>{infoEmprendedor.historia[1]}</p>
                             </div>
                         </div>
-                        <div className={styles.divNombre}>
-                            <h1>{nombre}</h1>
-                        </div>
+
                         <div id="produccion" className={styles.divProduccion}>
-                            <h1>Características Productivas</h1>
+                            <Image
+                                src={infoEmprendedor.imagenes[1]}
+                                fill
+                                alt='bg image'
+                                className={styles.bgImagen}
+                            />
+                        
+                            <div className={styles.divProduccionTitle}><h1>Características Productivas</h1></div>
+
+                            <div className={styles.divProduccionText}>
+                                <p>{infoEmprendedor.produccion[0]}</p>
+                            </div>
+                            <div className={styles.divProduccionText2}>
+                                <p>{infoEmprendedor.produccion[1]}</p>
+                            </div>
+                            
                         </div>
-                        <div className={styles.divProduccionText}>
-                            <p>{infoEmprendedor.produccion}</p>
-                        </div>
-                        <div className={styles.divImagen}>
-                            <div className={styles.imagen}>
-                                <Image
-                                    src = {infoEmprendedor.imagenes[0]}
-                                    fill
-                                    alt = "Foto producto"
-                                /> 
+
+                        <div id="geografia" className={styles.divGeografia}>
+                            <Image
+                                src={infoEmprendedor.imagenes[2]}
+                                fill
+                                alt='bg image'
+                                className={styles.bgImagen}
+                            />
+                            <div className={styles.divGeografiaTitle}>
+                                <h1>Características Geográficas</h1>
+                            </div>
+                            <div className={styles.divMapa}>
+                                <iframe src={infoEmprendedor.mapa}width="500" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className={styles.mapa}></iframe>
                             </div>
                         </div>
-                        <div id="geografia" className={styles.divGeografia}>
-                            <h1>Características Geográficas</h1>
-                        </div>
-                        <div className={styles.divMapa}>
-                            <iframe src={infoEmprendedor.mapa}width="500" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className={styles.mapa}></iframe>
-                        </div>
+
                         <div id="certificados" className={styles.divCertificados}>
-                            <h1>Certificados</h1>
-                            <p>{infoEmprendedor.certificados}</p>
+                            <Image
+                                src={infoEmprendedor.imagenes[3]}
+                                fill
+                                alt='bg image'
+                                className={styles.bgImagen}
+                            />
+                            <div className={styles.divCertificadosTitle}><h1>Certificados</h1></div>
+                            <div className={styles.divCertificadosList}>
+                                {infoEmprendedor.certificados.map((cert, index) => (
+                                    <div className={styles.certCont}>
+                                        <Link href={cert[1]} target="_blank">
+                                            <Image
+                                                src={cert[0]}
+                                                fill
+                                                alt='bg image'
+                                            />
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
+                        
                     </div>
 
                     <div className={styles.catalogo}>

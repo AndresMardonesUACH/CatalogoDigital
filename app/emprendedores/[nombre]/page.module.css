@@ -10,10 +10,11 @@
     box-shadow: 1px 4px 6px 0px rgba(181,172,181,0.8);
     display: flex;
     flex-direction: row;
-    z-index: 100;
+    z-index: 101;
     justify-content: center;
     font-family: 'Century Gothic';
     position: fixed;
+    height: 6vh;
 }
 
 .header a{
@@ -42,32 +43,33 @@
 
 .divPrincipal{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    position: relative;
+    width: 50vw;
+    height: 98vh;
     z-index: 1;
 }
 
-.divLogo{
-    position: relative;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-top: 0.5%;
+.divNomLogo{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
 }
 
 .logo{
-    width: 8rem;
-    height: 8rem;
+    position: relative;
+    width: 15vw;
+    height: 30vh;
     border: 0.1rem solid black;
     border-radius: 5%;
-    position: absolute;
 }
 
 
 .divNombre{
     background-color:#f0f8ff;
-    display: flex;
-    flex-direction: row;
-    padding: 3%;
-    width: 60%;
+    margin: auto;
+    width: 35vw;
+    padding: 1vw;
     z-index: 1;
 }
 
@@ -77,37 +79,60 @@
 
 .historia{
     background-color:aliceblue;
-    margin-left: 50%;
-    padding: 3%;
-    padding-top: 5%;
+    width: 25vw;
+    margin: 1vw 1vw 0 0 ;
+    margin-left: auto;
+    padding: 1vw;
     z-index: 1;
+    text-align: justify;
 }
 
 .historia p{
-    font-size: small;
+    font-size: 1rem;
     font-style: oblique;
 }
 
+.historia2{
+    background-color:aliceblue;
+    width: 23vw;
+    text-align: justify;
+    margin-left: 1vw;
+    margin-bottom: 10vh;
+    padding: 1vw;
+    z-index: 1;
+}
+
 .divProduccion{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;    
+    height: 98vh;
+}
+
+.divProduccionTitle{
     background-color: #f0f8ff;
     padding: 3%;
     margin: 3%;
-    margin-top: 80%;
     z-index: 1;
 }
 
 .divProduccionText{
-    width: 60%;
     background-color: aliceblue;
-    padding: 3%;
     text-align: justify;
+    width: 23.5vw;
+    margin: 8vh 3vh 0 3vh;
+    padding: 1vw;
     z-index: 1;
 }
 
-.divImagen{
-    position: relative;
-    margin-bottom: 10%;
-    margin-left: 50%; 
+.divProduccionText2{
+    background-color: aliceblue;
+    text-align: justify;
+    width: 23.5vw;
+    margin: 0 3vh 50vh auto;
+    padding: 1vw;
+    z-index: 1;
 }
 
 .imagen{
@@ -117,56 +142,67 @@
 }
 
 .divGeografia{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 0vh;
+    height: 98vh;
+}
+
+.divGeografiaTitle{
     background-color: aliceblue;
     padding: 3%;
     margin: 3%;
-    margin-top: 80%;
     z-index: 1;
 }
 
 .divMapa{
-    height: 100%;
-    margin-left: 10%;
-    margin-top: 10%;
-    margin: auto;
+    z-index: 1;
+    margin-left: 7vw;
+    margin-bottom: 50vh;
 }
 
-
 .divCertificados{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 98vh;
+}
+
+.divCertificadosTitle{
     background-color:aliceblue;
     padding: 3%;
     margin: 3%;
-    margin-top: 50%;
-    margin-bottom: 120%;
     z-index: 1;
+}
+
+.divCertificadosList{
+    margin-bottom: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.certCont{
+    width: 12vw;
+    height: 30vh;
+    position: relative;
+    margin: 2vw;
 }
 
 .catalogo{
     width: 50vw;
     height: 94vh;
     overflow-y: auto;
-    background-color: #89B0CD;
+    background-color: aliceblue;
     margin-top: 3%;
     text-align: center;
-/*
-        --s: 64px;
-        --c1: #89B0CD;
-        --c2: aliceblue;
-        
-        --_g: 90deg,#0000 0; 
-        background:
-          conic-gradient(from 135deg,var(--c1) var(--_g)) var(--s) calc(var(--s)/2),
-          conic-gradient(from 135deg,var(--c2) var(--_g)),
-          conic-gradient(from 135deg at 50% 0,var(--c1) var(--_g)) var(--c2); 
-        background-size: calc(2*var(--s)) var(--s);
-
-   */
+    z-index: 100;
 }
 
 .titleCat{
     font-size: x-large;
     margin-top: 2%;
-    background-color: white;
 }
 
 .productos{
