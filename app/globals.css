@@ -35,7 +35,7 @@ header a{
   display: flex;
   text-align: left;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: row-reverse;
   background-color: aliceblue;
   padding-top: 5.3vh;
   z-index: 20;
@@ -54,14 +54,19 @@ header a{
   margin-left: 7%;
 }
 
+.div-sobreN-text p{
+  margin-top: 1vw;
+}
+
 .div-sobreN-text h1{
   font-size: xx-large;
+  margin-bottom: 1vw;
 }
 
 .div-nuestrosObj{
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   background-color: rgb(255, 255, 255);
 }
@@ -82,16 +87,43 @@ header a{
 
 .div-nuestrosObj-text h1{
   font-size: xx-large;
+  margin-bottom: 1vw;
 }
 
 .div-beneficios{
   width: 100%;
   display: flex;
-  flex-direction: row;
-  padding: 5% 8% 5% 8%;
+  flex-direction: column;
+  padding: 3% 8% 5% 8%;
   justify-content: center;
-  background-color: aliceblue;
+  background-color: #f0f8ff;
 }
+
+.div-beneficios h1{
+  font-size: xx-large;
+  text-align: center; 
+  margin-bottom: 2%;
+}
+
+.div-beneficios-text{
+  margin: 1%;
+  display: flex;
+  flex-direction: row; 
+}
+
+.div-beneficios-text p{
+  margin-bottom: 1.5vh;
+}
+
+.beneficios-izq{
+  width: 50vw;
+  margin-right: 2vw;
+}
+
+.beneficios-der{
+  width: 50vw;
+}
+
 
 .div-imagen-3{
   position: relative;
@@ -99,22 +131,9 @@ header a{
   height: 100px;
 }
 
-.div-beneficios-text{
-  margin: 1%;
-  text-align: justify;
-}
-
-.div-beneficios-text h1{
-  font-size: xx-large;
-  text-align: center; 
-  margin-bottom: 2%;
-}
-
-
 .div-emprende{
   text-align: center;
 }
-
 
 .div-emprende-2{
   text-align: center;
@@ -123,7 +142,7 @@ header a{
   border-radius: 2%;
   padding: 2%;
   background-color:aliceblue;
-  margin-bottom: 70vh;
+
 }
 
 
@@ -142,6 +161,35 @@ header a{
 .fichero{
   display: flex;
   margin: 3%;
+  transition: .3s;
+}
+
+.fichero:hover{
+  box-shadow: 0px 6px 5px 2px rgba(209,202,209,1);
+}
+
+.pyme-form{
+  display: none;
+  text-align: center;
+  padding: 2vw;
+}
+
+
+footer{
+  text-align: center;
+  font-family: 'Century Gothic';
+  margin-top: 6vh;
+  padding-top: 1vw;
+}
+
+footer p{
+  margin-top: 1vw;
+}
+
+.rights{
+  font-size: 0.85rem;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 

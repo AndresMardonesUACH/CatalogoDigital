@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {data} from '@/app/api/data'
 import Fichero from '@/app/components/Fichero'
 import Buscador from '@/app/components/Buscador'
+import PymeForm from '@/app/components/PymeForm'
 
 
 export default function Home() {
@@ -16,14 +17,13 @@ export default function Home() {
         <a href='#beneficios'>Beneficios</a>
         <a href='#emprendedores'>Emprendedores</a>
     </header>
+
     <main>
-
-      
-
       <div className='div-sobreN'>
         <div className='div-imagen'>
         <Image
-          src = "/images/sobrenosotros.jpg"
+          
+          src = "/images/nuestrosobjetivos.png"
           fill
           alt='Sobre Nosotros'
         />
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
         <div className='div-imagen-2'>
         <Image
-          src = "/images/nuestrosobjetivos.png"
+          src = "/images/sobrenosotros.jpg"
           fill
           alt='Nuestros Objetivos'
         />
@@ -52,15 +52,28 @@ export default function Home() {
       </div>
 
       <div className='div-beneficios' id='beneficios'>
+        <h1>Beneficios de Catálogo Pymes</h1>
         <div className='div-beneficios-text'>
-          <h1>Beneficios de Catálogo Pymes</h1>
-          <ul>
-            <li> Romper la barrera de una zona geográfica específica (una Comuna, una Región, etc.), ofreciendo una cobertura mucho más amplia que la posible de obtener por medios tradicionales.</li>
-            <li>Tener una mayor presencia digital en un formato moderno y atractivo en base a los modelos de comercialización actuales.</li>
-            <li>Contar con una Ficha Pyme que contendrá aspectos tales como: Showroom de productos, Historia de la Pyme, Características Productivas, geoposicionamiento del emprendedor, documentación, etc.</li>
-            <li>Autoadministración del Showroom: el emprendedor podrá agregar, modificar, o eliminar de manera sencilla productos de su catálogo.</li>
-            <li>Tener una URL personalizada donde exponer y publicar los aspectos anteriores, y que servirá para ser utilizada como medio de promoción en redes sociales, papelería, campañas de mails, etc.</li>
-          </ul>
+          <div className='beneficios-izq'>
+            <b>Amplia Cobertura:</b>
+            <p>Nuestro catálogo rompe las barreras geográficas, ofreciendo una cobertura amplia, pudiendo llegar a todo Chile y al Extranjero. Estamos aquí para ayudarte a llegar a un público más amplio.</p>
+
+            <b>Presencia Digital:</b>
+            <p>Tendrás presencia digital en un formato moderno y atractivo, basado en los modelos de comercialización actuales. Con nosotros, tu negocio estará al día con las últimas tendencias digitales.</p>
+
+            <b>Ficha Pyme:</b>
+            <p>Esta ficha será el showroom de tus productos y de tu historia mostrando las características productivas y mucho más. Es una excelente manera de destacar lo que hace único a tu negocio.</p>
+          </div>
+          <div className='beneficios-der'>
+            <b>Autoadministración del Showroom:</b>
+            <p>Podrás agregar, modificar o eliminar productos de tu catálogo de manera sencilla, dándote total control sobre cómo presentas tus productos al mundo.</p>
+
+            <b>URL Personalizada:</b>
+            <p>Tendrás una URL personalizada donde podrás exponer y publicar todos los aspectos anteriores. Esta URL puede ser utilizada como medio de promoción en redes sociales, papelería, campañas de correo electrónico, y más.</p>
+            
+            <b>Buscador:</b>
+            <p>Nuestro catálogo incluye un buscador para facilitar a los clientes encontrar exactamente lo que están buscando.</p>
+          </div>
         </div>
       </div>
 
@@ -71,7 +84,6 @@ export default function Home() {
             alt='Banda'
           />
         </div>
-
         <div className='div-emprende' >
           <h1>Red de Emprendedores</h1>
           <Buscador/>
@@ -87,7 +99,19 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <div className='pyme-form'>
+          <PymeForm />
+      </div>
+
     </main>
+
+    <footer>
+      <p>En <b>Catálogo Pyme</b>, estamos comprometidos a ayudarte a crecer y prosperar en el mundo digital.</p>
+      <p>Únete a nosotros en este emocionante viaje y descubre cómo podemos ayudarte a alcanzar tus objetivos de negocio.</p>
+      <p>¡Estamos aquí para apoyarte en cada paso del camino!</p>
+      <p className='rights'>Desarrollado por Singa S.A.</p>
+    </footer>
     </>
   )
 }

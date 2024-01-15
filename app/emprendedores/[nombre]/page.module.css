@@ -85,6 +85,7 @@
     padding: 1vw;
     z-index: 1;
     text-align: justify;
+
 }
 
 .historia p{
@@ -121,7 +122,7 @@
     background-color: aliceblue;
     text-align: justify;
     width: 23.5vw;
-    margin: 8vh 3vh 0 3vh;
+    margin: 15vh 3vh 0 3vh;
     padding: 1vw;
     z-index: 1;
 }
@@ -181,6 +182,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .certCont{
@@ -188,6 +190,11 @@
     height: 30vh;
     position: relative;
     margin: 2vw;
+    transition: .2s;
+}
+
+.certCont:hover{
+    box-shadow: 0px 0px 4px 6px rgb(255, 255, 255);
 }
 
 .catalogo{

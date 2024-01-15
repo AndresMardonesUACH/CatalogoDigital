@@ -8,6 +8,7 @@ import { Card,
     ModalContent,
     ModalHeader,
     ModalBody,
+    useToast,
     ModalCloseButton,
     useDisclosure,
 
@@ -18,6 +19,7 @@ import Image from 'next/image'
 
 export default function Producto(props){
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const toast = useToast()
     const {info} = props
     return(
         <>
@@ -33,25 +35,50 @@ export default function Producto(props){
                 <div className={styles.divProductoText}>
                     <h1>{info.nomProducto}</h1>
                     <p>Valor : ${info.precio}</p>
-                    <Button className={styles.boton} marginLeft={10} marginTop={27} onClick={onOpen}>Ver más</Button>
+                    <Button  _hover={{ bg: '#568cb3', color: 'white' }} marginLeft={10} marginTop={27} onClick={onOpen}>Ver más</Button>
                 </div>
             </div>
         </Card>
 
         {isOpen ? (
-        <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
+        <Modal isOpen={isOpen} onClose={onClose} size={'xl'}>
             <ModalOverlay/>
             <ModalContent>
                 <ModalCloseButton   />
-                <ModalBody>
-                    <div className={styles.modal}>
-                        <h1>{info.nomProducto}</h1>
+                <ModalBody className={styles.modalBody} padding={10}>
+                    <div className={styles.modalDiv}>
+                        <div className={styles.divFoto}>
+                            <Image
+                                src={info.foto}
+                                fill
+                                alt='fotoProducto'
+                                style={{borderRadius: 10}}
+                            />
+                        </div>
+                        <div className={styles.divComprar}>
+                            <h1 className={styles.modalTitle}>{info.nomProducto}</h1>
+                            <h2>Valor : ${info.precio}</h2>
+                            <Button  colorScheme={"red"}
+                                        onClick={() =>
+                                            toast({
+                                                title: 'Producto Agregado',
+                                                description: "Se ha añadido este producto al carro de compras",
+                                                status: 'success',
+                                                duration: 3000,
+                                                isClosable: true,
+                                            })
+                                        }>
+                            Añadir al carrito
+                            </Button>
+                        </div>
+                    </div>
+
+                    <div className={styles.text}>
                         <h2>Descripción</h2>
                         <p>{info.desc}</p>
+                        
                     </div>
-                    <div>
-                        <Button marginLeft={380} marginTop={10} colorScheme={"red"}>Añadir al carrito</Button>
-                    </div>
+                    
                 </ModalBody>
             </ModalContent>
         </Modal>

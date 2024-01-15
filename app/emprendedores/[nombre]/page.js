@@ -50,6 +50,7 @@ export default function Emprendedor() {
                                         src={infoEmprendedor.logo}
                                         fill
                                         alt="Foto producto"
+                                        style={{borderRadius: 10}}
                                     />
                                 </div>
                                 <div className={styles.divNombre}>
@@ -115,6 +116,7 @@ export default function Emprendedor() {
                                                 src={cert[0]}
                                                 fill
                                                 alt='bg image'
+                                                style={{borderRadius: 10}}
                                             />
                                         </Link>
                                     </div>

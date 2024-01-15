@@ -14,6 +14,7 @@ export default function Fichero(props) {
             height={150}
             alt = "Logo empresa"
             className={styles.imagen}
+            style={{borderRadius: 10}}
           />
             <p className={styles.nomEmpresa}>{nombre}</p>
             <p>{rubro}</p>
