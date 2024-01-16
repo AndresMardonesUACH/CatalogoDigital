@@ -12,6 +12,11 @@ import {
 import { IoChevronDownOutline } from "react-icons/io5";
 import { useEffect, useState } from "react"
 import {regiones} from '@/app/api/regiones'
+import Link from 'next/link'
+import Image from 'next/image'
+
+import Fichero from '@/app/components/Fichero'
+import {data} from '@/app/api/data'
 import styles from './Buscador.module.css'
 
 
@@ -22,21 +27,45 @@ function buscaComunas(region){
       }
   }
   }
-  
+
+function buscaFicheros(region, comuna, categoria, data){
+    const ficheros = []
+    for(const i of data){
+      if(i.region == region || region == "Todas"){
+        if(i.comuna == comuna || comuna == "Todas"){
+          if(i.categoria == categoria || categoria == "Todas"){
+              ficheros.push(i)
+          }
+        }
+      }
+    }
+    return ficheros
+}
+
+
 
 export default function Buscador() {
     const [region, setRegion] = useState("Todas")
     const [comunas, setComunas] = useState([])
     const [comunaSelec, setComunaSelec ] = useState("Todas")
     const [categoria, setCategoria] = useState("Todas")
+    const [ficheros, setFicheros] = useState(data)
+
+    const categorias = ["Todas", "Artesanía", "Agricultura", "Gastronomía", "Textilería"]
 
     useEffect(() => {
         const newComunas = buscaComunas(region)
         setComunas(newComunas)
       }, [region]);
 
+    useEffect(() => {
+        const newFicheros = buscaFicheros(region, comunaSelec, categoria, data)
+        setFicheros(newFicheros)
+    }, [region, comunaSelec, categoria, ])
+
 
     return (
+      <>
         <div className={styles.buscador}>
           <div>
             <Menu closeOnSelect={true} >
@@ -73,13 +102,11 @@ export default function Buscador() {
                 Categoría
               </MenuButton>
               <MenuList>
-                <MenuOptionGroup defaultValue="Todas" type='radio'>
-                <MenuItemOption onClick={() => setCategoria("Todas")} value='Todas'>Todas</MenuItemOption>
-                  <MenuItemOption onClick={() => setCategoria("Artesanía")} value='A'>Artesanía</MenuItemOption>
-                  <MenuItemOption onClick={() => setCategoria("Agricultura")} value='B'>Agricultura</MenuItemOption>
-                  <MenuItemOption onClick={() => setCategoria("Gastronomía")} value='C'>Gastronomía</MenuItemOption>
-                  <MenuItemOption onClick={() => setCategoria("Textilería")} value='D'>Textilería</MenuItemOption>
-                </MenuOptionGroup>
+              <MenuOptionGroup defaultValue="Todas" type='radio'>
+                {categorias.map((cat, index) => (
+                    <MenuItemOption onClick={() => setCategoria(cat)} value={cat} key={index}>{cat} </MenuItemOption>
+                  ))}
+              </MenuOptionGroup>
               </MenuList>
             </Menu>
           </div>
@@ -89,5 +116,19 @@ export default function Buscador() {
             <b>Categoría: </b><p>{categoria}</p>
           </div>
         </div>
+
+        <div className='div-emprende-2'  >
+        <div className='div-ficheros'>
+          {ficheros.length > 0 ?(ficheros.map((emprendedor, index) => (
+            <div className='fichero'>
+              <Link href={`emprendedores/${emprendedor.nombre.replace(/ /g, "")}`} >
+                <Fichero nombre={emprendedor.hiddenNombre} rubro={emprendedor.rubro} logo={emprendedor.logo} key={index} />
+              </Link>
+            </div>
+          ))) : (<p>No se ha encontrado ningún emprendedor</p>) }
+          {}
+        </div>
+        </div>
+      </>
     )
   }

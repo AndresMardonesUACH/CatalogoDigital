@@ -26,11 +26,11 @@ export default function Emprendedor() {
     
     if(infoEmprendedor != "no existe"){
         return (
-            <div>
+            <>
                 <div className={styles.header}>
                     <a href='#historia'>Nuestra historia</a>
                     <a href='#produccion'>Producción</a>
-                    <Link href='/' className={styles.title}><h1>Catálogo Pymes</h1></Link>
+                    <Link href='/'><h1 className={styles.title}>Catálogo Pymes</h1></Link>
                     <a href='#geografia'>Geografía</a>
                     <a href='#certificados'>Certificados</a>
 
@@ -135,7 +135,7 @@ export default function Emprendedor() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
         )
     }
     else{

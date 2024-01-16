@@ -1,13 +1,11 @@
 "use client"
-import Image from 'next/image'
 import Link from 'next/link'
-import {data} from '@/app/api/data'
-import Fichero from '@/app/components/Fichero'
+import Image from 'next/image'
 import Buscador from '@/app/components/Buscador'
-import PymeForm from '@/app/components/PymeForm'
 
 
 export default function Home() {
+
   return (
     <>
     <header>
@@ -22,7 +20,6 @@ export default function Home() {
       <div className='div-sobreN'>
         <div className='div-imagen'>
         <Image
-          
           src = "/images/nuestrosobjetivos.png"
           fill
           alt='Sobre Nosotros'
@@ -86,24 +83,10 @@ export default function Home() {
         </div>
         <div className='div-emprende' >
           <h1>Red de Emprendedores</h1>
+
           <Buscador/>
+          
         </div>
-      <div className='div-emprende-2'  >
-        <div className='div-ficheros'>
-          {data.map((emprendedor, index) => (
-            <div className='fichero'>
-            <Link href = {`emprendedores/${emprendedor.nombre.replace(/ /g, "")}`} >
-                <Fichero nombre = {emprendedor.hiddenNombre} rubro = {emprendedor.rubro} logo = {emprendedor.logo} key = {index}/>
-            </Link>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className='pyme-form'>
-          <PymeForm />
-      </div>
-
     </main>
 
     <footer>

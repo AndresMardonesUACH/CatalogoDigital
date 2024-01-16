@@ -5,6 +5,9 @@ export const data =
       {
         nombre: "TerraSanta",
         hiddenNombre: "TerraSanta",
+        region: "Región Metropolitana de Santiago",
+        comuna: "Curacaví",
+        categoria: "Agricultura",
         rubro: "Aceite de oliva",
         logo: "/images/logo1.jpg",
         productos: [
@@ -24,6 +27,9 @@ export const data =
       {
         nombre: "Kutral",
         hiddenNombre: "Kutral",
+        region: "Región Metropolitana de Santiago",
+        comuna: "",
+        categoria: "Artesanía",
         rubro: "Artesanía",
         logo: "/images/logo2.jpg",
         productos: [
@@ -41,24 +47,36 @@ export const data =
       {
         nombre: "Kutral",
         hiddenNombre: "Apihuel",
+        region: "Región Metropolitana de Santiago",
+        comuna: "Isla de Maipo",
+        categoria: "Gastronomía",
         rubro: "Miel",
         logo: "/images/logo3.webp",
       },
       {
         nombre: "TerraSanta",
         hiddenNombre: "Payamtume",
+        region: "Atacama",
+        comuna: "Vallenar",
+        categoria: "Agricultura",
         rubro: "Aceites",
         logo: "/images/logo4.jpg",
       },
       {
         nombre: "Kutral",
         hiddenNombre: "Artesanías Volcán",
+        region: "Región de la Araucanía",
+        comuna: "Pucón",
+        categoria: "Artesanía",
         rubro: "Artesanía",
         logo: "/images/logo5.jpg",
       },
       {
         nombre: "TerraSanta",
         hiddenNombre: "Mawud",
+        region: "Región Metropolitana de Santiago",
+        comuna: "Lo Barnechea",
+        categoria: "Artesanía",
         rubro: "Artesanía",
         logo: "/images/logo6.png",
       },

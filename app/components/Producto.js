@@ -1,12 +1,9 @@
 import { Card,
-    CardHeader,
-    CardBody, 
-    CardFooter, 
     Button,
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
+    Divider,
     ModalBody,
     useToast,
     ModalCloseButton,
@@ -72,7 +69,7 @@ export default function Producto(props){
                             </Button>
                         </div>
                     </div>
-
+                    <Divider />                    
                     <div className={styles.text}>
                         <h2>Descripción</h2>
                         <p>{info.desc}</p>

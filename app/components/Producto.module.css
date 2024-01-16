@@ -51,11 +51,15 @@
 .divFoto{
     width: 20vw;
     height: 35vh;
-    margin-right: 1vw;
+    margin-right: 2vw;
     border-radius: 2rem;
     position: relative;
 }
 
 .modalBody h2{
     font-size: x-large;
+}
+
+.text{
+    margin-top: 1vw;
 }
