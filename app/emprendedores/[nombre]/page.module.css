@@ -21,6 +21,11 @@
     margin: 0.8% 3% 0.5% 3%;
 }
 
+.catA{
+    display: none;
+}
+
+
 .title{
     margin-top: -3%;
     font-size: x-large;
@@ -46,7 +51,7 @@
     flex-direction: column;
     position: relative;
     width: 50vw;
-    height: 98vh;
+    height: 100vh;
     z-index: 1;
 }
 
@@ -89,7 +94,6 @@
 }
 
 .historia p{
-    font-size: 1rem;
     font-style: oblique;
 }
 
@@ -101,6 +105,10 @@
     margin-bottom: 10vh;
     padding: 1vw;
     z-index: 1;
+}
+
+.historia2 p{
+    font-style: oblique;
 }
 
 .divProduccion{
@@ -148,6 +156,7 @@
     flex-direction: column;
     margin-top: 0vh;
     height: 98vh;
+    align-items: center;
 }
 
 .divGeografiaTitle{
@@ -155,11 +164,11 @@
     padding: 3%;
     margin: 3%;
     z-index: 1;
+    width: 46.5vw;
 }
 
 .divMapa{
     z-index: 1;
-    margin-left: 7vw;
     margin-bottom: 50vh;
 }
 
@@ -218,3 +227,213 @@
     flex-wrap: wrap;
 }
 
+
+@media screen and (max-width: 1300px) {
+
+
+    .divNomLogo{
+        margin-top: 2vh;
+    }
+
+    .logo{
+        height: 22vh;
+    }
+
+    .divPrincipal{
+        height: 100vh;
+    }
+
+    .divProduccion{
+        height: 100vh;
+    }
+
+    .divGeografia{
+        height: 100vh;
+    }
+
+    .divCertificados{
+        height: 100vh;
+    }
+
+
+    .historia p{
+        font-size: .9rem;
+    }
+
+    .historia2 p{
+        font-size: .9rem;
+    }
+
+    .historia2{
+        font-size: .9rem;
+        margin-bottom: 20vh;
+    }
+
+    .titleCat{
+        margin-top: 3vh;
+    }
+
+
+}
+
+@media screen and (max-width: 1030px) {
+
+    .header{
+        font-size: small;
+    }
+
+    .info p{
+        font-size: small;
+    }
+
+    .info{
+        overflow-x: hidden;
+    }
+
+    .mapa{
+        width: 400px;
+    }
+
+    .certCont{
+        width: 15vw;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .header{
+        height: 5vh;
+    }
+
+    .mapa{
+        width: 300px;
+    }
+
+    .logo{
+        height: 20vh;
+    }
+
+    .divNomLogo{
+        margin-top: 5vh;
+    }
+
+    .historia h1{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 725px) {
+
+    .main{
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .info{
+        width: 100vw;
+        height: 100%;
+    }
+
+    .divPrincipal{
+        width: auto;
+    }
+
+    .catalogo{
+        width: 100vw;
+        height: 100%;
+    }
+
+    .header a{
+        font-size: .6rem;
+    }
+
+    .title{
+        font-size: medium;
+    }
+
+    .header{
+        height: 4vh;
+    }
+
+    .divNombre{
+        margin-left: 0;
+        width: 85vw;
+    }
+
+    .historia{
+        width: 48vw;
+        margin-right: 2vw;
+        font-size: 3rem;
+    }
+
+    .historia2{
+        width: 46vw;
+        margin-left: 2vw;
+    }
+
+    .logo{
+        width: 25vw;
+    }
+
+    .certCont{
+        width: 30vw;
+    }
+
+    .divProduccionText{
+        width: 46vw;
+    }
+
+    .divProduccionText2{
+        width: 46vw;
+    }
+
+    .catalogo{
+        padding-top: 2vh;
+        margin-top: 0;
+    }
+
+    .divGeografiaTitle{
+        width: 92vw;
+    }
+
+    .mapa{
+        width: 500px;
+    }
+
+    .catA{
+        display: inline;
+    }
+
+}
+
+
+@media screen and (max-width: 630px) {
+
+    .mapa{
+        width: 350px;
+    }
+
+    .header a{
+        font-size: .5rem;
+        margin-left: 0;
+    }
+
+    .title{
+        visibility: hidden;
+        width: 0;
+        margin: 0;
+    }
+
+    .logo{
+        width: 35vw;
+    }
+
+    .header{
+        height: 3vh;
+    }
+
+
+
+}

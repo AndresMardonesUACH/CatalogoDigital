@@ -33,6 +33,7 @@ export default function Emprendedor() {
                     <Link href='/'><h1 className={styles.title}>Catálogo Pymes</h1></Link>
                     <a href='#geografia'>Geografía</a>
                     <a href='#certificados'>Certificados</a>
+                    <a href='#catalogo' className={styles.catA}>Productos</a>
 
                 </div>
                 <div className={styles.main}>
@@ -126,7 +127,7 @@ export default function Emprendedor() {
                         
                     </div>
 
-                    <div className={styles.catalogo}>
+                    <div className={styles.catalogo} id="catalogo">
                         <h1 className={styles.titleCat}>Nuestros Productos</h1>
                         <div className={styles.productos}>
                             {infoEmprendedor.productos.map((producto, index) => (

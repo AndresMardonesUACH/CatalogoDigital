@@ -206,6 +206,10 @@ footer p{
   .main-title{
     font-size: large;
   }
+
+  footer{
+    margin: 5vw;
+  }
 }
 
 
@@ -223,10 +227,9 @@ footer p{
 
 @media screen and (max-width: 620px) {
 
-  html{
-    width: 100vw;
+  body{
+    overflow-x: hidden;
   }
-
 
   header{
     width: 100vw;
@@ -270,6 +273,11 @@ footer p{
   .div-imagen-3{
     height: 60px;
   }
+
+  footer{
+    margin: 5vw;
+  }
+
 
 
 }
