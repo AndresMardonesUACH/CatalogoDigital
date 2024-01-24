@@ -416,8 +416,9 @@
     }
 
     .header a{
-        font-size: .5rem;
+        font-size: .68rem;
         margin-left: 0;
+        margin-right: 2vw;
     }
 
     .title{
@@ -430,8 +431,8 @@
         width: 35vw;
     }
 
-    .header{
-        height: 3vh;
+    .divProduccionText{
+        margin-top: 10vh;
     }
 
 
