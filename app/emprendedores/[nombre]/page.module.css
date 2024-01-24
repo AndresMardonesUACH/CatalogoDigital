@@ -4,6 +4,7 @@
     font-family: 'Century Gothic';
 }
 
+
 .header{
     width: 100vw;
     background-color: white;
@@ -35,9 +36,10 @@
     display: flex;
     flex-direction: column;
     width: 50vw;
-    height: 94vh;
+    height: 93.8vh;
     margin-top: 3%;
     overflow-y: hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     position: relative;
 }
@@ -208,7 +210,7 @@
 
 .catalogo{
     width: 50vw;
-    height: 94vh;
+    height: 93.8vh;
     overflow-y: auto;
     background-color: aliceblue;
     margin-top: 3%;
@@ -433,6 +435,19 @@
 
     .divProduccionText{
         margin-top: 10vh;
+    }
+
+    .historia{
+        padding: 3vw;
+    }
+    .historia2{
+        padding: 3vw;
+    }
+    .divProduccionText{
+        padding: 3vw;
+    }
+    .divProduccionText2{
+        padding: 3vw;
     }
 
 

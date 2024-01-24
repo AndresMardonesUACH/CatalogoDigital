@@ -68,16 +68,16 @@
 
 @media screen and (max-width:650px) {
     
-    .modalDiv{
-        
-    }
-
     .divFoto{
         width: 100vw;
     }
 
     .modalTitle{
         font-size: 1.5rem;
+    }
+
+    .divComprar h2{
+        font-size: .9rem;
     }
 
 

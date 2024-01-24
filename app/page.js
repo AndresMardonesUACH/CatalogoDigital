@@ -7,7 +7,7 @@ import Buscador from '@/app/components/Buscador'
 export default function Home() {
 
   return (
-    <>
+    <div>
     <header>
         <a href='#'>Inicio</a>
         <a href='#nuestrosObj'>Objetivos</a>
@@ -95,6 +95,6 @@ export default function Home() {
       <p>¡Estamos aquí para apoyarte en cada paso del camino!</p>
       <p className='rights'>Desarrollado por Singa S.A.</p>
     </footer>
-    </>
+    </div>
   )
 }
