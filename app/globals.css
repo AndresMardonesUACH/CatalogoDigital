@@ -188,9 +188,23 @@ footer p{
   margin-top: 1vw;
 }
 
+.div-icons{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+  justify-content: center;
+}
+
+.icon{
+  margin: 2vw;
+  height: 30px;
+  width: 40px;
+  cursor: pointer;
+}
+
 .rights{
   font-size: 0.85rem;
-  margin-top: 20vh;
+  margin-top: 10vh;
   margin-bottom: 20vh;
 }
 

@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Buscador from '@/app/components/Buscador'
+import { FaInstagram, FaFacebook,  } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 export default function Home() {
@@ -34,7 +36,7 @@ export default function Home() {
 
       <div className='div-nuestrosObj'  id = 'nuestrosObj'>
         <div className='div-nuestrosObj-text'>
-          <h1>Nuestros Objetivos</h1>
+          <h1>¿Qué hacemos en Catálogo Pymes?</h1>
           <p>Sabemos lo difícil que es emprender en Chile y generar canales de venta efectivos; Catálogo Pyme busca ser un puente entre el emprendedor y su mercado, dándole la posibilidad de tener una mayor cobertura digital y con esto tener acceso a un mayor número de clientes.</p>
           <br></br>
           <p>Como sabemos que tras un producto hay mucho tiempo, dedicación, esfuerzo, y sobre todo cariño y orgullo por lo propio; por ende, hemos creado el concepto de Identidad Productiva, que forma parte fundamental de nuestro catálogo y que busca que el emprendedor cuente su historia y sobre esto haga una diferenciación al momento de promocionar sus productos.</p>
@@ -93,6 +95,11 @@ export default function Home() {
       <p>En <b>Catálogo Pyme</b>, estamos comprometidos a ayudarte a crecer y prosperar en el mundo digital.</p>
       <p>Únete a nosotros en este emocionante viaje y descubre cómo podemos ayudarte a alcanzar tus objetivos de negocio.</p>
       <p>¡Estamos aquí para apoyarte en cada paso del camino!</p>
+      <div className='div-icons'>
+        	<FaInstagram className='icon'/> 
+        	<FaFacebook  className='icon'/>
+        	<FaXTwitter  className='icon'/>
+    </div>
       <p className='rights'>Desarrollado por Singa S.A.</p>
     </footer>
     </div>

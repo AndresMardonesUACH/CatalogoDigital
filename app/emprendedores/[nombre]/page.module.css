@@ -113,6 +113,11 @@
     font-style: oblique;
 }
 
+.divIcons{
+    margin-left: 12vw;
+    margin-top: 15vh;
+}
+
 .divProduccion{
     display: flex;
     flex-direction: column;
@@ -229,6 +234,10 @@
     flex-wrap: wrap;
 }
 
+.divDefaultR{
+    display: flex;
+    flex-direction: row;
+}
 
 @media screen and (max-width: 1300px) {
 
@@ -269,6 +278,10 @@
     .historia2{
         font-size: .9rem;
         margin-bottom: 20vh;
+    }
+
+    .divIcons{
+        margin-left: 8vw;
     }
 
     .titleCat{
@@ -322,6 +335,10 @@
 
     .historia h1{
         font-size: 1.2rem;
+    }
+
+    .divIcons{
+        margin-left: 5vw;
     }
 
 }

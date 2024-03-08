@@ -6,6 +6,7 @@ import '../../globals.css'
 import Image from 'next/image'
 import {data} from '@/app/api/data'
 import Producto from '@/app/components/Producto'
+import { SocialIcon } from 'react-social-icons'
 
 
 function buscaInfo(data, nomEmpresa){
@@ -62,8 +63,15 @@ export default function Emprendedor() {
                                 <h1>Nuestra Historia</h1>
                                 <p>{infoEmprendedor.historia[0]}</p>
                             </div>
-                            <div className={styles.historia2}>
-                                <p>{infoEmprendedor.historia[1]}</p>
+                            <div className={styles.divDefaultR}>
+                                <div className={styles.historia2}>
+                                    <p>{infoEmprendedor.historia[1]}</p>
+                                </div>
+                                <div className={styles.divIcons}>
+                                    <SocialIcon url="www.instagram.com" href={`${nombre}`} />
+                                    <SocialIcon url="www.whatsapp.com" href={`${nombre}`} />
+                                    <SocialIcon url="www.facebook.com" href={`${nombre}`} />
+                                </div>
                             </div>
                         </div>
 
